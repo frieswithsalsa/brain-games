@@ -11,6 +11,9 @@
     "url": "git+https://github.com/frieswithsalsa/frontend-project-44.git"
   },
   "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
