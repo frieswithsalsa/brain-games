@@ -5,4 +5,7 @@ brain-games:
 	node bin/brain-games.js
 
 make lint:
-	npx eslint .
+	npx eslint . 
+
+brain-even:
+	node bin/brain-even.js
