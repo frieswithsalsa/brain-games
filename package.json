@@ -22,5 +22,11 @@
   "homepage": "https://github.com/frieswithsalsa/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.0.0",
+    "@eslint/js": "^9.3.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.2.0"
   }
 }
