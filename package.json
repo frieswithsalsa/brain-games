@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "1st project",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/frieswithsalsa/frontend-project-44.git"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
