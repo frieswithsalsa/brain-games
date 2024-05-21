@@ -2,9 +2,12 @@
 
 import readlineSync from 'readline-sync';
 import { greetUser } from '../src/cli.js';
-greetUser();
+
+const userName = greetUser()
+
 
 export const brainEven = () => {
+    
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let correctAnswersCount = 0;
     const answersToWin = 3;
@@ -20,11 +23,11 @@ export const brainEven = () => {
             correctAnswersCount += 1;
         } else {
         console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-        console.log(`Let's try again`)
+        console.log(`Let's try again, ${userName}`)
         break
         } 
         if (correctAnswersCount === 3) {
-            console.log(`Congratulations!`)
+            console.log(`Congratulations, ${userName}!`)
         }
 
     }
