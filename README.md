@@ -5,3 +5,4 @@
 
 https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - brain-even gameplay
 https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - brain-calc gameplay
+https://asciinema.org/a/p2PgBwHYbAnX0JJRCaXh723Wf - brain-gcd gameplay
