@@ -7,3 +7,4 @@ https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - brain-even gameplay
 https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - brain-calc gameplay
 https://asciinema.org/a/p2PgBwHYbAnX0JJRCaXh723Wf - brain-gcd gameplay
 https://asciinema.org/a/jBnaR30Xt4ppvddfDqTwLDWok - brain-progression gameplay
+https://asciinema.org/a/uqJ3sgHFQMQj9E4qhSS5AwM9L - brain-prime gameplay
