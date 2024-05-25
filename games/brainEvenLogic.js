@@ -3,7 +3,7 @@
 import readlineSync from 'readline-sync';
 import { greetUser } from '../src/cli.js';
 
-const userName = greetUser()
+const userName = greetUser();
 
 
 export const brainEven = () => {
