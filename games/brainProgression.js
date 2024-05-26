@@ -30,7 +30,6 @@ const brainProgression = () => {
     const correctAnswer = progression[hiddenIndex].toString();
     progression[hiddenIndex] = '..';
     const question = progression.join(' ');
-
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
