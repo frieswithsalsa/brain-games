@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import readlineSync from "readline-sync";
-import { greetUser } from "../src/cli.js";
+import readlineSync from 'readline-sync';
+import { greetUser } from '../src/cli.js';
 
 const userName = greetUser();
 
@@ -20,19 +20,19 @@ export const brainPrime = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    let randomNumber = Math.floor(Math.random() * 101);
+    const randomNumber = Math.floor(Math.random() * 101);
     console.log(`Question: ${randomNumber}`);
 
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
     if (userAnswer === correctAnswer) {
-      console.log("Correct!");
+      console.log('Correct!');
       correctAnswersCount += 1;
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
       break;
