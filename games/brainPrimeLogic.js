@@ -6,7 +6,7 @@ import { greetUser } from '../src/cli.js';
 const userName = greetUser();
 
 const isPrime = (n) => {
-  for (let i = 2; i < n; i++) {
+  for (let i = 2; i < n; i += 1) {
     if (n % i === 0) {
       return false;
     }
@@ -14,7 +14,7 @@ const isPrime = (n) => {
   return n > 1;
 };
 
-export const brainPrime = () => {
+const brainPrime = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let correctAnswersCount = 0;
   const answersToWin = 3;
@@ -42,3 +42,5 @@ export const brainPrime = () => {
     console.log(`Congratulations, ${userName}!`);
   }
 };
+
+export default brainPrime;
