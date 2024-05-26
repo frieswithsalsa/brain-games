@@ -1,6 +1,6 @@
-import readlineSync from "readline-sync";
-import greetUser from "../src/cli.js";
-import isCorrectAnswer from "../utilities/answerCheck.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../src/cli.js';
+import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
@@ -19,7 +19,7 @@ const makeProgression = (num) => {
 };
 
 const brainProgression = () => {
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
 
   let correctAnswersCount = 0;
   const answersToWin = 3;
@@ -29,10 +29,10 @@ const brainProgression = () => {
     const progression = makeProgression(startNum);
     const hiddenIndex = randomInt(0, progressionLength - 1);
     const correctAnswer = progression[hiddenIndex].toString();
-    progression[hiddenIndex] = "..";
-    const question = progression.join(" ");
+    progression[hiddenIndex] = '..';
+    const question = progression.join(' ');
     console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
 
     correctAnswersCount = isCorrectAnswer(
       userAnswer,

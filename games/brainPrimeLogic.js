@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import readlineSync from "readline-sync";
-import greetUser from "../src/cli.js";
-import isCorrectAnswer from "../utilities/answerCheck.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../src/cli.js';
+import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
@@ -24,9 +24,9 @@ const brainPrime = () => {
     const randomNumber = Math.floor(Math.random() * 101);
     console.log(`Question: ${randomNumber}`);
 
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
     correctAnswersCount = isCorrectAnswer(
       userAnswer,

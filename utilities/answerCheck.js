@@ -5,7 +5,7 @@ const isCorrectAnswer = (
   correctAnswersCount
 ) => {
   if (userAnswer === correctAnswer) {
-    console.log("Correct!");
+    console.log('Correct!');
     correctAnswersCount += 1;
   } else {
     console.log(

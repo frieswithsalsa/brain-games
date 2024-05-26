@@ -1,6 +1,6 @@
-import readlineSync from "readline-sync";
-import greetUser from "../src/cli.js";
-import isCorrectAnswer from "../utilities/answerCheck.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../src/cli.js';
+import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
@@ -19,7 +19,7 @@ const findGcd = (num1, num2) => {
 };
 
 const brainGcd = () => {
-  console.log("Find the greatest common divisor of given numbers.");
+  console.log('Find the greatest common divisor of given numbers.');
   let correctAnswersCount = 0;
   const answersToWin = 3;
 
@@ -29,7 +29,7 @@ const brainGcd = () => {
 
     console.log(`Question: ${randomNumberOne} ${randomNumberTwo}`);
 
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = findGcd(randomNumberOne, randomNumberTwo).toString();
 

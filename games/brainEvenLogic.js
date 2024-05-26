@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import readlineSync from "readline-sync";
-import greetUser from "../src/cli.js";
-import isCorrectAnswer from "../utilities/answerCheck.js";
+import readlineSync from 'readline-sync';
+import greetUser from '../src/cli.js';
+import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
@@ -14,8 +14,8 @@ const brainEven = () => {
   while (correctAnswersCount < answersToWin) {
     const randomNumber = Math.floor(Math.random() * 101);
     console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question("Your answer: ");
-    const correctAnswer = randomNumber % 2 === 0 ? "yes" : "no";
+    const userAnswer = readlineSync.question('Your answer: ');
+    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
 
     correctAnswersCount = isCorrectAnswer(
       userAnswer,
