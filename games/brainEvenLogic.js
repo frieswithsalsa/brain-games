@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import readlineSync from "readline-sync";
+import greetUser from "../src/cli.js";
+import isCorrectAnswer from "../utilities/answerCheck.js";
 
 const userName = greetUser();
 
@@ -13,19 +14,18 @@ const brainEven = () => {
   while (correctAnswersCount < answersToWin) {
     const randomNumber = Math.floor(Math.random() * 101);
     console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+    const userAnswer = readlineSync.question("Your answer: ");
+    const correctAnswer = randomNumber % 2 === 0 ? "yes" : "no";
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswersCount += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-    if (correctAnswersCount === 3) {
+    correctAnswersCount = isCorrectAnswer(
+      userAnswer,
+      correctAnswer,
+      userName,
+      correctAnswersCount
+    );
+    if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);
+      return;
     }
   }
 };

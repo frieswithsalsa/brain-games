@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
+import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
@@ -31,16 +32,10 @@ const brainGcd = () => {
 
     const correctAnswer = findGcd(randomNumberOne, randomNumberTwo).toString();
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswersCount += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-    if (correctAnswersCount === 3) {
+    correctAnswersCount = isCorrectAnswer(userAnswer, correctAnswer, userName, correctAnswersCount)
+    if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);
+      return;
     }
   }
 };

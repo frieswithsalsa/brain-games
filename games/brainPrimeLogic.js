@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import readlineSync from "readline-sync";
+import greetUser from "../src/cli.js";
+import isCorrectAnswer from "../utilities/answerCheck.js";
 
 const userName = greetUser();
 
@@ -23,23 +24,20 @@ const brainPrime = () => {
     const randomNumber = Math.floor(Math.random() * 101);
     console.log(`Question: ${randomNumber}`);
 
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question("Your answer: ");
 
-    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswersCount += 1;
-    } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-      );
-      console.log(`Let's try again, ${userName}!`);
-      break;
+    correctAnswersCount = isCorrectAnswer(
+      userAnswer,
+      correctAnswer,
+      userName,
+      correctAnswersCount
+    );
+    if (correctAnswersCount === answersToWin) {
+      console.log(`Congratulations, ${userName}!`);
+      return;
     }
-  }
-  if (correctAnswersCount === 3) {
-    console.log(`Congratulations, ${userName}!`);
   }
 };
 
