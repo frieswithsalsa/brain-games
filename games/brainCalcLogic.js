@@ -33,6 +33,7 @@ export default brainCalc = () => {
         console.log('Error')
         }
 
+<<<<<<< HEAD
     if (userAnswer === correctAnswer.toString()) {
     console.log('Correct!');
     correctAnswersCount += 1;
@@ -44,5 +45,18 @@ export default brainCalc = () => {
     if (correctAnswersCount === 3) {
     console.log(`Congratulations, ${userName}!`);
         };
+=======
+        if (userAnswer === correctAnswer.toString()) {
+            console.log('Correct!');
+            correctAnswersCount += 1;
+        } else {
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+        console.log(`Let's try again, ${userName}!`)
+        break
+        } 
+        if (correctAnswersCount === 3) {
+            console.log(`Congratulations, ${userName}!`)
+        }
+>>>>>>> 7c6b7b650a5f7d557178c41302bde5a97d86f844
     }
 }

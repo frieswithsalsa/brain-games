@@ -2,10 +2,3 @@
 import { brainEven } from '../games/brainEvenLogic.js';
 
 brainEven();
-
-
-
-
-
-
-

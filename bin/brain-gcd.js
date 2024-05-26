@@ -2,4 +2,3 @@
 import { brainGcd } from '../games/brainGcdLogic.js';
 
 brainGcd();
-
