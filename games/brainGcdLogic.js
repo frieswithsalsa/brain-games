@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { greetUser } from '../src/cli.js';
+import greetUser from '../src/cli.js';
 
 const userName = greetUser();
 
