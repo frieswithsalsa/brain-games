@@ -38,7 +38,7 @@ export const brainCalc = () => {
     correctAnswersCount += 1;
     } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${userName}`);
+    console.log(`Let's try again, ${userName}!`);
     break
     };
     if (correctAnswersCount === 3) {
