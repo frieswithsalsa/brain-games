@@ -3,7 +3,7 @@ import { greetUser } from '../src/cli.js';
 
 const userName = greetUser();
 
-export const brainCalc = () => {
+const brainCalc = () => {
   console.log('What is the result of the expression?');
   let correctAnswersCount = 0;
   const answersToWin = 3;
@@ -44,5 +44,7 @@ export const brainCalc = () => {
     if (correctAnswersCount === 3) {
       console.log(`Congratulations, ${userName}!`);
     }
-  };
+  }
 };
+
+export default brainCalc;
