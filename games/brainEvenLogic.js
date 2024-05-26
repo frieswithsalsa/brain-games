@@ -5,18 +5,16 @@ import { greetUser } from '../src/cli.js';
 
 const userName = greetUser();
 
-
-export const brainEven = () => {
-    
+const brainEven = () => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let correctAnswersCount = 0;
-    const answersToWin = 3;
+  const answersToWin = 3;
 
-    while (correctAnswersCount < answersToWin) {
-        let randomNumber = Math.floor(Math.random() * 101);
-        console.log(`Question: ${randomNumber}`);
-        const userAnswer =  readlineSync.question('Your answer: ');
-        const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+  while (correctAnswersCount < answersToWin) {
+  const randomNumber = Math.floor(Math.random() * 101);
+  console.log(`Question: ${randomNumber}`);
+  const userAnswer =  readlineSync.question('Your answer: ');
+    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
 
         if (userAnswer === correctAnswer) {
             console.log('Correct!');
@@ -31,3 +29,5 @@ export const brainEven = () => {
         }
     }
 };
+
+export default brainEven;
