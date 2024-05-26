@@ -16,7 +16,7 @@ const isPrime = (n) => {
 
 export const brainPrime = () => {
     
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+    console.log('Answer "yes" if the number is prime, otherwise answer "no".');
     let correctAnswersCount = 0;
     const answersToWin = 3;
 
@@ -33,7 +33,7 @@ export const brainPrime = () => {
             correctAnswersCount += 1;
         } else {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-            console.log(`Let's try again, ${userName}!`)
+            console.log(`Let's try again, ${userName}`)
         break
         }
     }
