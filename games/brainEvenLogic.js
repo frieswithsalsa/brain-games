@@ -29,8 +29,5 @@ export const brainEven = () => {
         if (correctAnswersCount === 3) {
             console.log(`Congratulations, ${userName}!`)
         }
-
     }
-
-        
 };
