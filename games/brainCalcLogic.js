@@ -35,7 +35,7 @@ const brainCalc = () => {
       default:
         console.log('Error');
     }
-   
+
     if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
       correctAnswersCount += 1;
     } else {
@@ -45,7 +45,7 @@ const brainCalc = () => {
     if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);
       return;
-    } 
+    }
   }
 };
 

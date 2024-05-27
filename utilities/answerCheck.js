@@ -1,4 +1,4 @@
-const isCorrectAnswer = (userAnswer, correctAnswer, userName, correctAnswersCount) => {
+const isCorrectAnswer = (userAnswer, correctAnswer, userName) => {
   if (userAnswer === correctAnswer.toString()) {
     console.log('Correct!');
     return true;
