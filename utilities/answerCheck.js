@@ -1,13 +1,12 @@
 const isCorrectAnswer = (userAnswer, correctAnswer, userName, correctAnswersCount) => {
-  if (userAnswer === correctAnswer) {
+  if (userAnswer === correctAnswer.toString()) {
     console.log('Correct!');
-    correctAnswersCount += 1;
+    return true;
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
-    return;
+    return false;
   }
-  return correctAnswersCount;
 };
 
 export default isCorrectAnswer;

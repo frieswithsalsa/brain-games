@@ -33,12 +33,12 @@ const brainGcd = () => {
 
     const correctAnswer = findGcd(randomNumberOne, randomNumberTwo).toString();
 
-    correctAnswersCount = isCorrectAnswer(
-      userAnswer,
-      correctAnswer,
-      userName,
-      correctAnswersCount,
-    );
+    if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
+      correctAnswersCount += 1;
+    } else {
+      return;
+    }
+
     if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);
       return;

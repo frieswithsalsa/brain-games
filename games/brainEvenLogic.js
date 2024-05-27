@@ -17,12 +17,12 @@ const brainEven = () => {
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
 
-    correctAnswersCount = isCorrectAnswer(
-      userAnswer,
-      correctAnswer,
-      userName,
-      correctAnswersCount,
-    );
+    if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
+      correctAnswersCount += 1;
+    } else {
+      return;
+    }
+
     if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);
       return;
