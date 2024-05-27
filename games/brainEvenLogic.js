@@ -21,7 +21,7 @@ const brainEven = () => {
       userAnswer,
       correctAnswer,
       userName,
-      correctAnswersCount
+      correctAnswersCount,
     );
     if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);

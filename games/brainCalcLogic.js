@@ -17,7 +17,7 @@ const brainCalc = () => {
     const randomIndex = operationsArray[randomOperation];
 
     console.log(
-      `Question: ${randomNumberOne} ${randomIndex} ${randomNumberTwo}`
+      `Question: ${randomNumberOne} ${randomIndex} ${randomNumberTwo}`,
     );
     const userAnswer = readlineSync.question('Your answer: ');
     let correctAnswer;
@@ -39,7 +39,7 @@ const brainCalc = () => {
       userAnswer.toString(),
       correctAnswer.toString(),
       userName,
-      correctAnswersCount
+      correctAnswersCount,
     );
     if (correctAnswersCount === answersToWin) {
       console.log(`Congratulations, ${userName}!`);

@@ -2,14 +2,14 @@ const isCorrectAnswer = (
   userAnswer,
   correctAnswer,
   userName,
-  correctAnswersCount
+  correctAnswersCount,
 ) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
     correctAnswersCount += 1;
   } else {
     console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
     );
     console.log(`Let's try again, ${userName}!`);
     return;
