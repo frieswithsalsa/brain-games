@@ -66,30 +66,31 @@ brain-prime
 Пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
 ### Запуск игры: __"brain-even"__
 
-[![asciicast](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh.svg)](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh)
+[![asciicast](https://asciinema.org/a/gV7GtnOjF155hMVklh3tcLMRh.svg)](https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq)
 
 ## Игра: "Калькулятор"
 ### Описание игры:
 Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 ### Запуск игры: __"brain-calc"__
-[![asciicast](https://asciinema.org/a/skzUhVffVHj2ALjZfIEVgEaQW.svg)](https://asciinema.org/a/skzUhVffVHj2ALjZfIEVgEaQW)
+[![asciicast](https://asciinema.org/a/skzUhVffVHj2ALjZfIEVgEaQW.svg)](https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM)
 
 ## Игра: "НОД"
 ### Описание игры:
 Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 ### Запуск игры: __"brain-gcd"__
-[![asciicast](https://asciinema.org/a/rWCMyJdfVcFfjxa2GrMmQ9KVe.svg)](https://asciinema.org/a/rWCMyJdfVcFfjxa2GrMmQ9KVe)
+[![asciicast](https://asciinema.org/a/rWCMyJdfVcFfjxa2GrMmQ9KVe.svg)](https://asciinema.org/a/p2PgBwHYbAnX0JJRCaXh723Wf)
 
 ## Игра: "Арифметическая прогрессия"
 ### Описание игры:
 Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
 ### Запуск игры: __"brain-progression"__
-[![asciicast](https://asciinema.org/a/kjsEAMHoUedjHcEbK5GOI0f8y.svg)](https://asciinema.org/a/kjsEAMHoUedjHcEbK5GOI0f8y)
+[![asciicast](https://asciinema.org/a/kjsEAMHoUedjHcEbK5GOI0f8y.svg)](https://asciinema.org/a/jBnaR30Xt4ppvddfDqTwLDWok)
 
 ## Игра: "Простое ли число?"
 ### Описание игры:
 Пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если не простое.
 ### Запуск игры: __"brain-prime"__
+[![asciicast](https://asciinema.org/a/ptW43GSZzHwVnDcHvdNyms7bO.svg)](https://asciinema.org/a/uqJ3sgHFQMQj9E4qhSS5AwM9L)
 
 
 
