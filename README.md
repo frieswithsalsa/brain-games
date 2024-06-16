@@ -17,6 +17,8 @@
 <li>Определение простого числа.</li>
 </ul>
 
+<h1>Требования для запуска</h2>
+
 https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - Пример запсука игры по определению четного числа.
 
 https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - Пример запуска игры с арифметическими выражениями.
