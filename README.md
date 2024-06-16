@@ -19,6 +19,8 @@
 
 <h1>Требования для запуска</h2>
 
+Для запуска необходим <b>Node.js</b> версии не ниже <b>13.2.0</b>
+
 https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - Пример запсука игры по определению четного числа.
 
 https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - Пример запуска игры с арифметическими выражениями.
