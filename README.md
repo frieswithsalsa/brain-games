@@ -21,6 +21,15 @@
 
 Для запуска требуется <b>Node.js</b> версии <b>13.2.0</b> или выше.
 
+### Установка
+
+```
+npm i
+```
+```
+npm link
+```
+
 https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - Пример запсука игры по определению четного числа.
 
 https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - Пример запуска игры с арифметическими выражениями.
