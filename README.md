@@ -93,13 +93,3 @@ brain-prime
 [![asciicast](https://asciinema.org/a/ptW43GSZzHwVnDcHvdNyms7bO.svg)](https://asciinema.org/a/uqJ3sgHFQMQj9E4qhSS5AwM9L)
 
 
-
-https://asciinema.org/a/jQ57PMc1rSMVd7rC4QgxTKXnq - Пример запсука игры по определению четного числа.
-
-https://asciinema.org/a/UGkITCQh9JZKYb8QZU6gODRfM - Пример запуска игры с арифметическими выражениями.
-
-https://asciinema.org/a/p2PgBwHYbAnX0JJRCaXh723Wf - Пример запуска игры по определению наибольшего общего делителя.
-
-https://asciinema.org/a/jBnaR30Xt4ppvddfDqTwLDWok - Пример запуска игры по поиску пропущенных чисел в последовательности чисел.
-
-https://asciinema.org/a/uqJ3sgHFQMQj9E4qhSS5AwM9L - Пример запуска игры по определению простого числа.
