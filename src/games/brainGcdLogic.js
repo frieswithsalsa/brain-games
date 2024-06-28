@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
-const findGcd = (num1, num2) => {
+const runGcd = (num1, num2) => {
   let a = num1;
   let b = num2;
 
@@ -46,4 +46,4 @@ const brainGcd = () => {
   }
 };
 
-export default brainGcd;
+export default runGcd;

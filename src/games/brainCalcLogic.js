@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
-const brainCalc = () => {
+const runBrainCalc = () => {
   console.log('What is the result of the expression?');
   let correctAnswersCount = 0;
   const answersToWin = 3;
@@ -49,4 +49,4 @@ const brainCalc = () => {
   }
 };
 
-export default brainCalc;
+export default runBrainCalc;

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
@@ -18,7 +18,7 @@ const makeProgression = (num) => {
     .map((elem, index) => elem + index * difference);
 };
 
-const brainProgression = () => {
+const runBrainProgression = () => {
   console.log('What number is missing in the progression?');
 
   let correctAnswersCount = 0;
@@ -47,4 +47,4 @@ const brainProgression = () => {
   }
 };
 
-export default brainProgression;
+export default runBrainProgression;
