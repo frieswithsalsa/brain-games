@@ -4,7 +4,7 @@ import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
-const runGcd = (num1, num2) => {
+const findGcd  = (num1, num2) => {
   let a = num1;
   let b = num2;
 
@@ -18,7 +18,7 @@ const runGcd = (num1, num2) => {
   return a + b;
 };
 
-const brainGcd = () => {
+const runGcd = () => {
   console.log('Find the greatest common divisor of given numbers.');
   let correctAnswersCount = 0;
   const answersToWin = 3;
