@@ -16,11 +16,10 @@ const isPrime = (n) => {
 const startRound = () => {
   const number = getRandomNumber(1, 100);
   const question = `Question: ${number}`;
-  const correctAnswer = (isPrime(number) ? 'yes' : 'no');
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
 const runGame = () => startGame(rule, startRound);
 
 export default runGame;
-

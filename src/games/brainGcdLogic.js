@@ -19,14 +19,13 @@ const findGcd = (num1, num2) => {
 };
 
 const startRound = () => {
-    const number1 = getRandomNumber(1, 100);
-    const number2 = getRandomNumber(1, 100);
-     const question = `Question: ${number1} ${number2}`;
-    const correctAnswer = findGcd(number1, number2).toString();
-    return [question, correctAnswer];
-}
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
+  const question = `Question: ${number1} ${number2}`;
+  const correctAnswer = findGcd(number1, number2).toString();
+  return [question, correctAnswer];
+};
 
 const runGame = () => startGame(rule, startRound);
 
 export default runGame;
-    

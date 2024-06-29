@@ -14,13 +14,13 @@ const makeProgression = (num) => {
 };
 
 const startRound = () => {
-    const startNum = getRandomNumber(1, 100);
-    const progression = makeProgression(startNum);
-    const hiddenIndex = getRandomNumber(0, progressionLength - 1);
-    const correctAnswer = progression[hiddenIndex].toString();
-    progression[hiddenIndex] = '..';
-    const question = `Question: ${progression.join(' ')}`;
-    return [question, correctAnswer];
+  const startNum = getRandomNumber(1, 100);
+  const progression = makeProgression(startNum);
+  const hiddenIndex = getRandomNumber(0, progressionLength - 1);
+  const correctAnswer = progression[hiddenIndex].toString();
+  progression[hiddenIndex] = '..';
+  const question = `Question: ${progression.join(' ')}`;
+  return [question, correctAnswer];
 };
 
 const runGame = () => startGame(rule, startRound);
