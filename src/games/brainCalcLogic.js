@@ -11,8 +11,8 @@ const runBrainCalc = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const number1 = getRandomNumber().number1;
-    const number2 = getRandomNumber().number2;
+    const { number1 } = getRandomNumber();
+    const { number2 } = getRandomNumber();
     const operationsArray = ['+', '-', '*'];
     const randomOperation = Math.floor(Math.random() * operationsArray.length);
     const randomIndex = operationsArray[randomOperation];
