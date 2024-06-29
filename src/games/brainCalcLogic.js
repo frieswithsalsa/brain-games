@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
+import getRandomNumber from '../index.js';
 
 const userName = greetUser();
 
@@ -10,27 +11,27 @@ const runBrainCalc = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const randomNumberOne = Math.floor(Math.random() * 101);
-    const randomNumberTwo = Math.floor(Math.random() * 101);
+    const number1 = getRandomNumber().number1
+    const number2 = getRandomNumber().number2
     const operationsArray = ['+', '-', '*'];
     const randomOperation = Math.floor(Math.random() * operationsArray.length);
     const randomIndex = operationsArray[randomOperation];
 
     console.log(
-      `Question: ${randomNumberOne} ${randomIndex} ${randomNumberTwo}`,
+      `Question: ${number1} ${randomIndex} ${number2}`,
     );
     const userAnswer = readlineSync.question('Your answer: ');
     let correctAnswer;
 
     switch (randomIndex) {
       case '+':
-        correctAnswer = randomNumberOne + randomNumberTwo;
+        correctAnswer = number1 + number2;
         break;
       case '-':
-        correctAnswer = randomNumberOne - randomNumberTwo;
+        correctAnswer = number1 - number2;
         break;
       case '*':
-        correctAnswer = randomNumberOne * randomNumberTwo;
+        correctAnswer = number1 * number2;
         break;
       default:
         console.log('Error');

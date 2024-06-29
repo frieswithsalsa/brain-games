@@ -3,6 +3,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
+import getRandomNumber from '../index.js';
 
 const userName = greetUser();
 
@@ -12,10 +13,10 @@ const runBrainEven = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const randomNumber = Math.floor(Math.random() * 101);
-    console.log(`Question: ${randomNumber}`);
+    const number = getRandomNumber().number1;
+    console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
 
     if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
       correctAnswersCount += 1;
