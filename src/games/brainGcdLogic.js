@@ -4,7 +4,7 @@ import isCorrectAnswer from '../utilities/answerCheck.js';
 
 const userName = greetUser();
 
-const findGcd  = (num1, num2) => {
+const findGcd = (num1, num2) => {
   let a = num1;
   let b = num2;
 
