@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
-import getRandomNumber from '../index.js';
+import getRandomNumber from '../numbersGenerator.js';
 
 const userName = greetUser();
 
