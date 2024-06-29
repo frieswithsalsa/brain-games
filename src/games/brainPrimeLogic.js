@@ -3,6 +3,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
+import getRandomNumber from '../index.js';
 
 const userName = greetUser();
 
@@ -21,12 +22,12 @@ const runBrainPrime = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const randomNumber = Math.floor(Math.random() * 101);
-    console.log(`Question: ${randomNumber}`);
+    const number = getRandomNumber().number1
+    console.log(`Question: ${number}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
     if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
       correctAnswersCount += 1;

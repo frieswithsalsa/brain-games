@@ -5,4 +5,3 @@ const getRandomNumber = () => {
 }
 
 export default getRandomNumber;
-
