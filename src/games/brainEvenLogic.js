@@ -1,34 +1,18 @@
 #!/usr/bin/env node
+import getRandomNumber from '../numbersGenerator.js';
+import startGame from '../index.js';
 
-import readlineSync from 'readline-sync';
-import greetUser from '../utilities/cli.js';
-import isCorrectAnswer from '../utilities/answerCheck.js';
-import getRandomNumber from '../index.js';
+const rule = `Answer "yes" if the number is even, otherwise answer "no".`;
 
-const userName = greetUser();
+const isEven = (number) => number % 2 === 0;
 
-const runBrainEven = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  let correctAnswersCount = 0;
-  const answersToWin = 3;
-
-  while (correctAnswersCount < answersToWin) {
-    const number = getRandomNumber(1, 100);
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-
-    if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
-      correctAnswersCount += 1;
-    } else {
-      return;
-    }
-
-    if (correctAnswersCount === answersToWin) {
-      console.log(`Congratulations, ${userName}!`);
-      return;
-    }
-  }
+const startRound = () => {
+  const randomNumber = getRandomNumber(1, 100);
+  const question = `Question: ${randomNumber}`;
+  const correctAnswer = (isEven(randomNumber) ? 'yes' : 'no');
+  return [question, correctAnswer];
 };
 
-export default runBrainEven;
+const runGame = () => startGame(rule, startRound);
+
+export default runGame;

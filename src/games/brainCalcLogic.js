@@ -1,51 +1,39 @@
-import readlineSync from 'readline-sync';
-import greetUser from '../utilities/cli.js';
-import isCorrectAnswer from '../utilities/answerCheck.js';
 import getRandomNumber from '../numbersGenerator.js';
+import startGame from '../index.js';
 
-const userName = greetUser();
+const rule = 'What is the result of the expression?';
 
-const runBrainCalc = () => {
-  console.log('What is the result of the expression?');
-  let correctAnswersCount = 0;
-  const answersToWin = 3;
+const operations = ['+', '-', '*'];
 
-  while (correctAnswersCount < answersToWin) {
-    const number1 = getRandomNumber(1, 100);
-    const number2 = getRandomNumber(1, 100);
-    const operationsArray = ['+', '-', '*'];
-    const randomOperation = Math.floor(Math.random() * operationsArray.length);
-    const randomIndex = operationsArray[randomOperation];
-
-    console.log(`Question: ${number1} ${randomIndex} ${number2}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    let correctAnswer;
-
-    switch (randomIndex) {
+const calculate = (number1, number2, operator) => {
+  let answer;
+    switch (operator) {
       case '+':
-        correctAnswer = number1 + number2;
+        answer = `${number1 + number2}`;
         break;
       case '-':
-        correctAnswer = number1 - number2;
+        answer = `${number1 - number2}`;
         break;
       case '*':
-        correctAnswer = number1 * number2;
+        answer = `${number1 * number2}`;
         break;
       default:
         console.log('Error');
     }
+    return answer;
+  };
 
-    if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
-      correctAnswersCount += 1;
-    } else {
-      return;
-    }
+  const startRound = () => {
+    const randomNumber1 = getRandomNumber(1, 100);
+    const randomNumber2 = getRandomNumber(1, 100);
+    const operator = operations[getRandomNumber(0, operations.length - 1)];
+    const question = `Question: ${randomNumber1} ${operator} ${randomNumber2}`;
+    const correctAnswer = calculate(randomNumber1, randomNumber2, operator);
+    return [question, correctAnswer];
+  };
+  
+  const runGame = () => startGame(rule, startRound);
 
-    if (correctAnswersCount === answersToWin) {
-      console.log(`Congratulations, ${userName}!`);
-      return;
-    }
-  }
-};
+export default runGame;
 
-export default runBrainCalc;
+
