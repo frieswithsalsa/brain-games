@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../utilities/cli.js';
 import isCorrectAnswer from '../utilities/answerCheck.js';
+import getRandomNumber from '../index.js';
 
 const userName = greetUser();
 
@@ -24,14 +25,14 @@ const runGcd = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const randomNumberOne = Math.floor(Math.random() * 101);
-    const randomNumberTwo = Math.floor(Math.random() * 101);
+    const { number1 } = getRandomNumber();
+    const { number2 } = getRandomNumber();
 
-    console.log(`Question: ${randomNumberOne} ${randomNumberTwo}`);
+    console.log(`Question: ${number1} ${number2}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    const correctAnswer = findGcd(randomNumberOne, randomNumberTwo).toString();
+    const correctAnswer = findGcd(number1, number2).toString();
 
     if (isCorrectAnswer(userAnswer, correctAnswer, userName)) {
       correctAnswersCount += 1;
