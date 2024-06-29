@@ -1,7 +1,5 @@
-const getRandomNumber = () => {
-  const number1 = Math.floor(Math.random() * 101);
-  const number2 = Math.floor(Math.random() * 101);
-  return { number1, number2 };
-};
+const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+   };
 
 export default getRandomNumber;

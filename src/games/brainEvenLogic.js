@@ -13,7 +13,7 @@ const runBrainEven = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const number = getRandomNumber().number1;
+    const number = getRandomNumber(1, 100);
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
