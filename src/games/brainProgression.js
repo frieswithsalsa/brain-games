@@ -2,7 +2,7 @@
 import getRandomNumber from '../numbersGenerator.js';
 import startGame from '../index.js';
 
-const rule = 'What number is missing in the progression?'
+const rule = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
@@ -19,7 +19,7 @@ const startRound = () => {
     const hiddenIndex = getRandomNumber(0, progressionLength - 1);
     const correctAnswer = progression[hiddenIndex].toString();
     progression[hiddenIndex] = '..';
-    const question = progression.join(' ');
+    const question = `Question: ${progression.join(' ')}`;
     return [question, correctAnswer];
 };
 
