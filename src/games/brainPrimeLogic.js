@@ -22,7 +22,7 @@ const runBrainPrime = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const number = getRandomNumber().number1
+    const number = getRandomNumber().number1;
     console.log(`Question: ${number}`);
 
     const userAnswer = readlineSync.question('Your answer: ');

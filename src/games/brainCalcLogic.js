@@ -11,15 +11,13 @@ const runBrainCalc = () => {
   const answersToWin = 3;
 
   while (correctAnswersCount < answersToWin) {
-    const number1 = getRandomNumber().number1
-    const number2 = getRandomNumber().number2
+    const number1 = getRandomNumber().number1;
+    const number2 = getRandomNumber().number2;
     const operationsArray = ['+', '-', '*'];
     const randomOperation = Math.floor(Math.random() * operationsArray.length);
     const randomIndex = operationsArray[randomOperation];
 
-    console.log(
-      `Question: ${number1} ${randomIndex} ${number2}`,
-    );
+    console.log(`Question: ${number1} ${randomIndex} ${number2}`);
     const userAnswer = readlineSync.question('Your answer: ');
     let correctAnswer;
 
