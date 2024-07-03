@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import getRandomNumber from '../numbersGenerator.js';
+import getRandomNumber from '../utils.js';
 import startGame from '../index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
