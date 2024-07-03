@@ -7,8 +7,8 @@ const rule = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const makeProgression = (num, difference) => Array(progressionLength)
-    .fill(num)
-    .map((elem, index) => elem + index * difference);
+  .fill(num)
+  .map((elem, index) => elem + index * difference);
 
 const startRound = () => {
   const startNum = getRandomNumber(1, 100);
