@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import getRandomNumber from '../numbersGenerator.js';
+import getRandomNumber from '../utils.js';
 import startGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
